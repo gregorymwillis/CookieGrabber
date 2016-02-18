@@ -16,6 +16,10 @@
 		893E4CDD1C6BF3C20078A0A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 893E4CDB1C6BF3C20078A0A6 /* LaunchScreen.storyboard */; };
 		893E4CE81C6BF3C20078A0A6 /* Cookie_GrabberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E4CE71C6BF3C20078A0A6 /* Cookie_GrabberTests.swift */; };
 		893E4CF31C6BF3C20078A0A6 /* Cookie_GrabberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E4CF21C6BF3C20078A0A6 /* Cookie_GrabberUITests.swift */; };
+		89D162651C73E395006E9D55 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 89D162641C73E395006E9D55 /* TitleScene.sks */; };
+		89D162671C73E3CA006E9D55 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D162661C73E3CA006E9D55 /* TitleScene.swift */; };
+		89D1626A1C73E416006E9D55 /* particleExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 89D162681C73E416006E9D55 /* particleExplosion.sks */; };
+		89D1626B1C73E416006E9D55 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D162691C73E416006E9D55 /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		893E4CEE1C6BF3C20078A0A6 /* Cookie GrabberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cookie GrabberUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		893E4CF21C6BF3C20078A0A6 /* Cookie_GrabberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookie_GrabberUITests.swift; sourceTree = "<group>"; };
 		893E4CF41C6BF3C20078A0A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89D162641C73E395006E9D55 /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleScene.sks; sourceTree = "<group>"; };
+		89D162661C73E3CA006E9D55 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
+		89D162681C73E416006E9D55 /* particleExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = particleExplosion.sks; sourceTree = "<group>"; };
+		89D162691C73E416006E9D55 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,10 @@
 				893E4CD91C6BF3C20078A0A6 /* Assets.xcassets */,
 				893E4CDB1C6BF3C20078A0A6 /* LaunchScreen.storyboard */,
 				893E4CDE1C6BF3C20078A0A6 /* Info.plist */,
+				89D162641C73E395006E9D55 /* TitleScene.sks */,
+				89D162661C73E3CA006E9D55 /* TitleScene.swift */,
+				89D162681C73E416006E9D55 /* particleExplosion.sks */,
+				89D162691C73E416006E9D55 /* spark.png */,
 			);
 			path = "Cookie Grabber";
 			sourceTree = "<group>";
@@ -238,7 +250,10 @@
 				893E4CD11C6BF3C20078A0A6 /* GameScene.sks in Resources */,
 				893E4CDD1C6BF3C20078A0A6 /* LaunchScreen.storyboard in Resources */,
 				893E4CDA1C6BF3C20078A0A6 /* Assets.xcassets in Resources */,
+				89D1626B1C73E416006E9D55 /* spark.png in Resources */,
+				89D162651C73E395006E9D55 /* TitleScene.sks in Resources */,
 				893E4CD81C6BF3C20078A0A6 /* Main.storyboard in Resources */,
+				89D1626A1C73E416006E9D55 /* particleExplosion.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +281,7 @@
 				893E4CD31C6BF3C20078A0A6 /* GameScene.swift in Sources */,
 				893E4CD51C6BF3C20078A0A6 /* GameViewController.swift in Sources */,
 				893E4CCF1C6BF3C20078A0A6 /* AppDelegate.swift in Sources */,
+				89D162671C73E3CA006E9D55 /* TitleScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +510,7 @@
 				893E4CF91C6BF3C20078A0A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		893E4CFA1C6BF3C20078A0A6 /* Build configuration list for PBXNativeTarget "Cookie GrabberTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +519,7 @@
 				893E4CFC1C6BF3C20078A0A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		893E4CFD1C6BF3C20078A0A6 /* Build configuration list for PBXNativeTarget "Cookie GrabberUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +528,7 @@
 				893E4CFF1C6BF3C20078A0A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
