@@ -24,6 +24,7 @@ var isAlive = true
 var hudColor = UIColor.whiteColor()
 
 var score = 0
+var scoreNumber = 10
 
 struct physicsCategory {
     static let player : UInt32 = 1
@@ -49,10 +50,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         resetVariablesOnStart()
     }
     
-    func resetVariablesOnStart() {
-        isAlive = true
-        score = 0
-    }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches {
@@ -234,6 +231,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func updateScore() {
         scoreLabel?.text = "\(score)"
+        increaseEnemySpeed()
     }
     
     func waitThenMoveToTitleScene() {
@@ -262,5 +260,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             explosion.removeFromParent()
         }
         self.runAction(SKAction.sequence([explosionTimer, removeExplosion]))
+    }
+    
+    func resetVariablesOnStart() {
+        isAlive = true
+        score = 0
+        scoreNumber = 10
+        cookieSpeed = 4.0
+    }
+    
+    func increaseEnemySpeed() {
+        if score ==  scoreNumber {
+            cookieSpeed -= 0.5
+            printLevelUp()
+            hideMainLabel()
+            scoreNumber += 10
+        }
+    }
+    
+    func printLevelUp() {
+        mainLabel?.fontName = "Courier"
+        mainLabel?.fontSize = 50
+        mainLabel?.alpha = 1.0
+        mainLabel?.text = "Level Up"
     }
 }
