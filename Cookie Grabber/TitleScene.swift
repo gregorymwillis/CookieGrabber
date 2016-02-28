@@ -38,14 +38,14 @@ class TitleScene : SKScene {
     }
     
     func playTheGame() {
-        self.view?.presentScene(GameScene(), transition: SKTransition.fadeWithDuration(1.0))
+//        self.view?.presentScene(GameScene(), transition: SKTransition.fadeWithDuration(1.0))
         gameTitle?.removeFromParent()
         playButton.removeFromSuperview()
         
         if let scene = GameScene(fileNamed: "GameScene") {
             let skView = self.view! as SKView
             skView.ignoresSiblingOrder = true
-            scene.scaleMode = .AspectFill
+            scene.scaleMode = .ResizeFill
             skView.presentScene(scene)
         }
     }

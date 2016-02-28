@@ -91,7 +91,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func spawnSquareCollect() {
         squareCollect = SKSpriteNode(imageNamed: "cookie")
         squareCollect?.size = CGSize(width: 40, height: 40)
-        squareCollect?.position = CGPoint(x: Int(arc4random_uniform(700) + 300), y: 800)
+        squareCollect?.position = CGPoint(x: Int(arc4random_uniform(UInt32(CGRectGetMaxX(frame)))), y: Int(CGRectGetHeight(frame)))
         let moveForward = SKAction.moveToY(-100, duration: cookieSpeed)
         let destroy = SKAction.removeFromParent()
         
@@ -108,7 +108,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func spawnCircleAvoid() {
         circleAvoid = SKSpriteNode(imageNamed: "monster")
-        circleAvoid?.position = CGPoint(x: Int(arc4random_uniform(700) + 300), y: 800)
+        circleAvoid?.position = CGPoint(x: Int(arc4random_uniform(UInt32(CGRectGetMaxX(frame)))), y: Int(CGRectGetHeight(frame)))
         circleAvoid?.size = CGSize(width: 40, height: 50)
         circleAvoid?.physicsBody = SKPhysicsBody(rectangleOfSize: (circleAvoid?.size)!)
         circleAvoid?.physicsBody?.affectedByGravity = false
@@ -129,7 +129,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let randomSpeed = Double(arc4random_uniform(4) + 1)
         
         stars = SKSpriteNode(color: UIColor.whiteColor(), size: CGSize(width: randomSize, height: randomSize))
-        stars?.position = CGPoint(x: Int(arc4random_uniform(700) + 300), y: 800)
+        stars?.position = CGPoint(x: Int(arc4random_uniform(UInt32(CGRectGetMaxX(frame)))), y: Int(CGRectGetHeight(frame)))
         stars?.zPosition = -1
         
         let moveForward = SKAction.moveToY(-100, duration: randomSpeed)
